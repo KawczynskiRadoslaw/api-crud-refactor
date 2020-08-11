@@ -1,0 +1,9 @@
+{
+  "excursions": [
+    {
+      "id": 1,
+      "name": "Zwiedzanie Krakowa",
+      "price": 120
+    }
+  ]
+}
