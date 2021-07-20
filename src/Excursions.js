@@ -7,7 +7,7 @@ class Excursions {
     load() {
         this.apiService.loadData()
             .then(data => {
-                this.insert( data );
+                this.insert(data);
             })
             .catch(err => console.error(err));
     }
@@ -18,7 +18,7 @@ class Excursions {
 
         data.forEach( item => {
             const liEl = this._createLi(item);
-            ulEl.appendChild( liEl );
+            ulEl.appendChild(liEl);
         });
     }
 
@@ -30,7 +30,7 @@ class Excursions {
                 const id = this._getIdFromRoot(targetEl);
                 this.apiService.removeData(id)
                     .catch(err => console.error(err))
-                    .finally( () => this.load() );
+                    .finally(() => this.load());
             }
         })
     }
@@ -47,7 +47,7 @@ class Excursions {
 
             this.apiService.addData(data)
                 .catch(err => console.error(err))
-                .finally( () => this.load() );
+                .finally(() => this.load());
         });
     }
 
@@ -134,7 +134,7 @@ class Excursions {
         liEl.innerHTML = `
             [<a href="#">usuń</a>]
             <span>${itemData.name}</span>: 
-            <span>${itemData.price}</span>PLN
+            <span>${itemData.price}</span> PLN
             <button>edytuj</button>
         `;
 
